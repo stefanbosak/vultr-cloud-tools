@@ -73,7 +73,7 @@ on:
         description: 'VULTR_CLI_VERSION'
         required: false
         type: string
-        default: 'v3.10.0'
+        default: 'v3.11.0'
       CONTAINER_TAG:
         description: 'CONTAINER_TAG'
         required: false

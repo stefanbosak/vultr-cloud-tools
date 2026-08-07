@@ -27,9 +27,9 @@
 | **Terraform** | [`1.16.0-beta2`](https://github.com/hashicorp/terraform/releases/tag/v1.16.0-beta2) |
 | **Terragrunt** | [`v1.1.2`](https://github.com/gruntwork-io/terragrunt/releases/tag/v1.1.2) |
 | **OpenTofu** | [`1.12.5`](https://github.com/opentofu/opentofu/releases/tag/v1.12.5) |
-| **Vultr CLI** | [`v3.10.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.10.0) |
+| **Vultr CLI** | [`v3.11.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.11.0) |
 
-> 🔄 Last updated: 2026-08-05T23:04:44+02:00 · [Build #35](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/31143620596)
+> 🔄 Last updated: 2026-08-07T08:07:20+02:00 · [Build #36](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/31197648157)
 <!-- VERSION_INFO_END -->
 
 ---
