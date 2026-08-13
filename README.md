@@ -1,0 +1,126 @@
+<div align="center">
+
+# ☁️ Vultr Cloud Tools
+
+**Vultr ecosystem CLI tools (Hardened)**
+
+[![build_status_badge](../../actions/workflows/docker-image-native-multiplatform-pipeline.yaml/badge.svg?branch=main)](.github/workflows/docker-image-native-multiplatform-pipeline.yaml)
+[![Vultr](https://img.shields.io/badge/Vultr-007BFC?style=flat-square)](https://www.vultr.com/)
+
+</div>
+
+---
+
+## 📦 Latest Build
+
+<!-- VERSION_INFO_START -->
+| Component | Version |
+|-----------|---------|
+| **Ansible** | [`v2.21.3`](https://github.com/ansible/ansible/releases/tag/v2.21.3) |
+| **cert-manager CLI** | [`v2.5.0`](https://github.com/cert-manager/cmctl/releases/tag/v2.5.0) |
+| **Helm** | [`v4.2.4`](https://github.com/helm/helm/releases/tag/v4.2.4) |
+| **K9s** | [`v0.51.0`](https://github.com/derailed/k9s/releases/tag/v0.51.0) |
+| **Kops** | [`v1.36.2`](https://github.com/kubernetes/kops/releases/tag/v1.36.2) |
+| **Kubectl** | [`v1.37.0-rc.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.37.0-rc.0) |
+| **Kustomize** | [`5.8.1`](https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize/v5.8.1) |
+| **SwarmCLI** | [`v1.14.0-rc3`](https://github.com/Eldara-Tech/swarmcli/releases/tag/v1.14.0-rc3) |
+| **Terraform** | [`1.17.0-alpha20260812`](https://github.com/hashicorp/terraform/releases/tag/v1.17.0-alpha20260812) |
+| **Terragrunt** | [`v1.1.3`](https://github.com/gruntwork-io/terragrunt/releases/tag/v1.1.3) |
+| **OpenTofu** | [`1.12.5`](https://github.com/opentofu/opentofu/releases/tag/v1.12.5) |
+| **Vultr CLI** | [`v3.11.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.11.0) |
+
+> 🔄 Last updated: 2026-08-13T10:44:04+02:00 · [Build #46](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/31720830844)
+<!-- VERSION_INFO_END -->
+
+---
+
+## 📋 Overview
+
+This repository provides a fully automated preparation of <span style="color: #0969da;">**containerized**</span> [Vultr](https://www.vultr.com/) environment using <span style="color: #1a7f37;">**Docker-in-Docker**</span> architecture.
+
+### Covered CLI tools
+
+| Tool | Description |
+|------|-------------|
+| [Ansible CLI](https://docs.ansible.com/ansible/latest/command_guide/command_line_tools.html) | <span style="color: #8250df;">Configuration management and automation</span> |
+| [Vultr CLI](https://github.com/vultr/vultr-cli/) | <span style="color: #8250df;">Official Vultr command-line interface</span> |
+| [cert-manager CLI](https://github.com/cert-manager/cmctl/) | <span style="color: #d73a49;">cert-manager CLI</span> |
+| [CNPG CLI](https://github.com/cloudnative-pg/cloudnative-pg/) | <span style="color: #d73a49;">CloudNativePG CLI</span> |
+| [Docker CLI](https://docker.com) | <span style="color: #d73a49;">Container management CLI</span> |
+| [HELM CLI](https://helm.sh/docs/helm/) | <span style="color: #0969da;">Kubernetes package manager</span> |
+| [kops CLI](https://kops.sigs.k8s.io/) | <span style="color: #0969da;">Kubernetes cluster management</span> |
+| [kubectl CLI](https://kubernetes.io/docs/reference/kubectl/) | <span style="color: #0969da;">Kubernetes command-line tool</span> |
+| [k9s CLI](https://k9scli.io/) | <span style="color: #0969da;">Terminal UI for Kubernetes</span> |
+| [SwarmCLI](https://github.com/Eldara-Tech/swarmcli) | <span style="color: #0969da;">Terminal UI for Docker Swarm</span> |
+| [Terraform CLI](https://developer.hashicorp.com/terraform/cli) | <span style="color: #1a7f37;">Infrastructure as Code tool</span> |
+| [Terragrunt CLI](https://terragrunt.gruntwork.io/) | <span style="color: #1a7f37;">Terraform wrapper for DRY configurations</span> |
+| [OpenTofu CLI](https://opentofu.org/) | <span style="color: #1a7f37;">Open-source Infrastructure as Code tool (Terraform fork)</span> |
+
+> [!NOTE]
+> Every script and file is reasonably well commented and relevant details can be found there.
+
+> [!IMPORTANT]
+> Check details before taking any action.
+
+> [!CAUTION]
+> User is responsible for any modification and execution of any parts from this repository.
+
+---
+
+## ⚡ Zero Effort Approach
+
+GitHub Actions workflow file covers all necessary activities which are fully automated in GitHub (re-using Docker container approach as base for automation):
+
+- <span style="color: #1a7f37;">Gathering and propagating latest available tools versions to Docker preparation process</span>
+- <span style="color: #0969da;">Building Docker hardened image</span>
+
+---
+
+## 🐳 Docker Container Approach
+
+Docker build wrapper script covers creation of a container built from a multistage Dockerfile using parallel execution of several builders to speed up preparation. Generated image contains all mentioned tools with pre-enabled Bash completions. Docker run wrapper simplifies application execution.
+
+| File | Description |
+|------|-------------|
+| [`Dockerfile`](Dockerfile) | <span style="color: #0969da;">Recipe for preparation of Docker container</span> |
+| [`.docker`](.docker) | <span style="color: #8250df;">Directory for configuration data persistency (can be mapped into container)</span> |
+| [`.config`](.config) | <span style="color: #8250df;">Directory for Vultr configuration data persistency (can be mapped into container)</span> |
+| [`scripts`](scripts) | <span style="color: #1a7f37;">Vultr helper scripts directory (can be mapped into container)</span> |
+
+### 🏗️ Container Images
+
+| Registry | Network Support | Pull Command |
+|----------|----------------|--------------|
+| [**DockerHub CR**](https://hub.docker.com/r/developmententity/vultr-cloud-tools) | <span style="color: #1a7f37;">IPv4 & IPv6</span> | `docker pull developmententity/vultr-cloud-tools:initial` |
+| [**GitHub CR**](https://github.com/users/stefanbosak/packages/container/package/vultr-cloud-tools) | <span style="color: #8250df;">IPv4 only</span> | `docker pull ghcr.io/stefanbosak/vultr-cloud-tools:initial` |
+
+---
+
+## 🌍 Vultr Environment
+
+Vultr environment can be used via vultr-cloud-tools container which is automatically generated and available within ghcr.io. The dedicated `run.sh` script pulls and runs the up-to-date container. Authentication uses the [Vultr API key](https://my.vultr.com/settings/#settingsapi) exported as an environment variable:
+
+```bash
+export VULTR_API_KEY=<your-api-key>
+```
+
+Alternatively, a `vultr-cli.yaml` config file can be placed under `.config/vultr` (mapped into the container) and referenced via the `--config` flag:
+
+```yaml
+api-key: <your-api-key>
+```
+
+```bash
+vultr-cli instance list --config .config/vultr/vultr-cli.yaml
+```
+
+> [!NOTE]
+> Environment variables always take precedence over values defined in the config file.
+
+---
+
+<div align="center">
+
+<span style="color: #8250df;">**Made with ❤️ for ☁️ Vultr ecosystem and 🔒 security**</span>
+
+</div>
