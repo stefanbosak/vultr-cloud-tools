@@ -30,7 +30,7 @@
 | **OpenTofu** | [`1.13.0-rc1`](https://github.com/opentofu/opentofu/releases/tag/v1.13.0-rc1) |
 | **Vultr CLI** | [`v3.11.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.11.0) |
 
-> 🔄 Last updated: 2026-09-18T20:30:18+02:00 · [Build #103](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/35612069090)
+> 🔄 Last updated: 2026-09-21T20:28:28+02:00 · [Build #104](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/35638759023)
 <!-- VERSION_INFO_END -->
 
 ---
