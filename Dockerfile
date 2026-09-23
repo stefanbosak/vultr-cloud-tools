@@ -28,6 +28,9 @@ ARG K9S_CLI_VERSION=v0.51.0
 # kops version
 ARG KOPS_CLI_VERSION=v1.36.0-beta.1
 
+# kpt version
+ARG KPT_CLI_VERSION=v1.0.0
+
 # kubectl version
 ARG KUBECTL_CLI_VERSION=v1.36.2
 
@@ -210,6 +213,29 @@ ADD "https://github.com/kubernetes/kops/releases/download/${KOPS_CLI_VERSION}/ko
 
 # install kubectl
 RUN mkdir -p "/usr/local/bin/" && install -v -o root -g root -m 0755 "${WORKSPACE_ROOT_DIR}/kops-${TARGETOS}-${TARGETARCH}" "/usr/local/bin/kops"
+
+
+# container as builder for preparing Vultr cloud tools
+FROM vultr-cloud-tools-builder AS vultr-cloud-tools-kpt-builder
+
+LABEL stage="vultr-cloud-tools-kpt-builder" \
+      description="Debian-based container builder for preparing Vultr cloud tool kpt CLI" \
+      org.opencontainers.image.description="Debian-based container builder for preparing Vultr cloud tool kpt CLI" \
+      org.opencontainers.image.url=https://github.com/stefanbosak/vultr-cloud-tools \
+      org.opencontainers.image.source=https://github.com/stefanbosak/vultr-cloud-tools
+
+ARG TARGETOS
+ARG TARGETARCH
+ARG KPT_CLI_VERSION
+
+ARG WORKSPACE_ROOT_DIR
+WORKDIR "${WORKSPACE_ROOT_DIR}"
+
+# download kpt CLI binary file
+ADD "https://github.com/kptdev/kpt/releases/download/${KPT_CLI_VERSION}/kpt_linux_${TARGETARCH}" "${WORKSPACE_ROOT_DIR}/"
+
+# install kpt
+RUN mkdir -p "/usr/local/bin/" && install -v -o root -g root -m 0755 "${WORKSPACE_ROOT_DIR}/kpt_linux_${TARGETARCH}" "/usr/local/bin/kpt"
 
 
 # container as builder for preparing Vultr cloud tools
@@ -405,6 +431,7 @@ COPY --from=vultr-cloud-tools-cnpg-builder "/usr/local/bin/" "/usr/local/bin/"
 COPY --from=vultr-cloud-tools-helm-builder "/usr/local/bin/" "/usr/local/bin/"
 COPY --from=vultr-cloud-tools-k9s-builder "/usr/local/bin/" "/usr/local/bin/"
 COPY --from=vultr-cloud-tools-kops-builder "/usr/local/bin/" "/usr/local/bin/"
+COPY --from=vultr-cloud-tools-kpt-builder "/usr/local/bin/" "/usr/local/bin/"
 COPY --from=vultr-cloud-tools-kubectl-builder "/usr/local/bin/" "/usr/local/bin/"
 COPY --from=vultr-cloud-tools-kustomize-builder "/usr/local/bin/" "/usr/local/bin/"
 COPY --from=vultr-cloud-tools-sofka-builder "/usr/local/bin/" "/usr/local/bin/"
@@ -523,6 +550,7 @@ RUN if getent group "${CONTAINER_GROUP_ID}" > /dev/null; then \
     helm completion bash > "/usr/share/bash-completion/completions/helm" && \
     k9s completion bash > "/usr/share/bash-completion/completions/k9s" && \
     kops completion bash > "/usr/share/bash-completion/completions/kops" && \
+    kpt completion bash > "/usr/share/bash-completion/completions/kpt" && \
     kubectl completion bash > "/usr/share/bash-completion/completions/kubectl" && \
     cp "/usr/share/bash-completion/completions/kubectl" "/usr/share/bash-completion/completions/k" && \
     sed -i 's/kubectl/k/g' "/usr/share/bash-completion/completions/k" && \

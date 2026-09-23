@@ -21,16 +21,17 @@
 | **Helm** | [`v4.3.0`](https://github.com/helm/helm/releases/tag/v4.3.0) |
 | **K9s** | [`v0.51.0`](https://github.com/derailed/k9s/releases/tag/v0.51.0) |
 | **Kops** | [`v1.37.0-beta.1`](https://github.com/kubernetes/kops/releases/tag/v1.37.0-beta.1) |
-| **Kubectl** | [`v1.37.1`](https://github.com/kubernetes/kubernetes/releases/tag/v1.37.1) |
+| **Kpt** | [`v1.0.0`](https://github.com/kptdev/kpt/releases/tag/v1.0.0) |
+| **Kubectl** | [`v1.37.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.37.0) |
 | **Kustomize** | [`5.8.1`](https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize/v5.8.1) |
-| **Sofka** | [`v0.29.0`](https://github.com/nklmilojevic/sofka/releases/tag/v0.29.0) |
+| **Sofka** | [`v0.28.5`](https://github.com/nklmilojevic/sofka/releases/tag/v0.28.5) |
 | **SwarmCLI** | [`v2.1.1`](https://github.com/Eldara-Tech/swarmcli/releases/tag/v2.1.1) |
-| **Terraform** | [`1.17.0-beta2`](https://github.com/hashicorp/terraform/releases/tag/v1.17.0-beta2) |
+| **Terraform** | [`1.16.4`](https://github.com/hashicorp/terraform/releases/tag/v1.16.4) |
 | **Terragrunt** | [`v1.1.6`](https://github.com/gruntwork-io/terragrunt/releases/tag/v1.1.6) |
 | **OpenTofu** | [`1.13.0-rc1`](https://github.com/opentofu/opentofu/releases/tag/v1.13.0-rc1) |
 | **Vultr CLI** | [`v3.11.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.11.0) |
 
-> 🔄 Last updated: 2026-09-23T16:27:40+02:00 · [Build #110](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/35915592198)
+> 🔄 Last updated: 2026-09-23T12:27:18+02:00 · [Build #108](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/35873915091)
 <!-- VERSION_INFO_END -->
 
 ---
@@ -50,6 +51,7 @@ This repository provides a fully automated preparation of <span style="color: #0
 | [Docker CLI](https://docker.com) | <span style="color: #d73a49;">Container management CLI</span> |
 | [HELM CLI](https://helm.sh/docs/helm/) | <span style="color: #0969da;">Kubernetes package manager</span> |
 | [kops CLI](https://kops.sigs.k8s.io/) | <span style="color: #0969da;">Kubernetes cluster management</span> |
+| [kpt CLI](https://kpt.dev/) | <span style="color: #0969da;">Package-centric Kubernetes configuration toolchain</span> |
 | [kubectl CLI](https://kubernetes.io/docs/reference/kubectl/) | <span style="color: #0969da;">Kubernetes command-line tool</span> |
 | [k9s CLI](https://k9scli.io/) | <span style="color: #0969da;">Terminal UI for Kubernetes</span> |
 | [Sofka CLI](https://sofka.rs) | <span style="color: #0969da;">Terminal UI for Kubernetes (Rust)</span> |
