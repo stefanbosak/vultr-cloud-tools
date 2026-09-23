@@ -27,10 +27,10 @@
 | **SwarmCLI** | [`v2.1.1`](https://github.com/Eldara-Tech/swarmcli/releases/tag/v2.1.1) |
 | **Terraform** | [`1.16.3`](https://github.com/hashicorp/terraform/releases/tag/v1.16.3) |
 | **Terragrunt** | [`v1.1.6`](https://github.com/gruntwork-io/terragrunt/releases/tag/v1.1.6) |
-| **OpenTofu** | [`1.12.6`](https://github.com/opentofu/opentofu/releases/tag/v1.12.6) |
+| **OpenTofu** | [`1.13.0-rc1`](https://github.com/opentofu/opentofu/releases/tag/v1.13.0-rc1) |
 | **Vultr CLI** | [`v3.11.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.11.0) |
 
-> 🔄 Last updated: 2026-09-23T00:25:17+02:00 · [Build #106](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/35837521661)
+> 🔄 Last updated: 2026-09-23T10:34:29+02:00 · [Build #107](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/35848519351)
 <!-- VERSION_INFO_END -->
 
 ---
