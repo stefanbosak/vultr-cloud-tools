@@ -24,14 +24,14 @@
 | **Kpt** | [`v1.0.2-pre.2`](https://github.com/kptdev/kpt/releases/tag/v1.0.2-pre.2) |
 | **Kubectl** | [`v1.38.0-alpha.1`](https://github.com/kubernetes/kubernetes/releases/tag/v1.38.0-alpha.1) |
 | **Kustomize** | [`5.8.2`](https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize/v5.8.2) |
-| **Sofka** | [`v0.31.0`](https://github.com/nklmilojevic/sofka/releases/tag/v0.31.0) |
+| **Sofka** | [`v0.31.1`](https://github.com/nklmilojevic/sofka/releases/tag/v0.31.1) |
 | **SwarmCLI** | [`v2.2.0-rc2`](https://github.com/Eldara-Tech/swarmcli/releases/tag/v2.2.0-rc2) |
 | **Terraform** | [`1.16.5`](https://github.com/hashicorp/terraform/releases/tag/v1.16.5) |
 | **Terragrunt** | [`v1.2.0-rc1`](https://github.com/gruntwork-io/terragrunt/releases/tag/v1.2.0-rc1) |
 | **OpenTofu** | [`1.13.1`](https://github.com/opentofu/opentofu/releases/tag/v1.13.1) |
 | **Vultr CLI** | [`v3.11.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.11.0) |
 
-> 🔄 Last updated: 2026-10-07T00:28:14+02:00 · [Build #142](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/37636691311)
+> 🔄 Last updated: 2026-10-07T16:31:01+02:00 · [Build #143](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/37652295170)
 <!-- VERSION_INFO_END -->
 
 ---
