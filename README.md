@@ -16,7 +16,7 @@
 <!-- VERSION_INFO_START -->
 | Component | Version |
 |-----------|---------|
-| **Ansible** | [`v2.21.5`](https://github.com/ansible/ansible/releases/tag/v2.21.5) |
+| **Ansible** | [`v2.22.0rc1`](https://github.com/ansible/ansible/releases/tag/v2.22.0rc1) |
 | **cert-manager CLI** | [`v2.6.1`](https://github.com/cert-manager/cmctl/releases/tag/v2.6.1) |
 | **Helm** | [`v4.3.0`](https://github.com/helm/helm/releases/tag/v4.3.0) |
 | **K9s** | [`v0.51.0`](https://github.com/derailed/k9s/releases/tag/v0.51.0) |
@@ -31,7 +31,7 @@
 | **OpenTofu** | [`1.13.1`](https://github.com/opentofu/opentofu/releases/tag/v1.13.1) |
 | **Vultr CLI** | [`v3.11.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.11.0) |
 
-> 🔄 Last updated: 2026-10-11T16:26:17+02:00 · [Build #153](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/38236763988)
+> 🔄 Last updated: 2026-10-12T12:33:29+02:00 · [Build #154](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/38492576717)
 <!-- VERSION_INFO_END -->
 
 ---
