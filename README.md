@@ -26,12 +26,12 @@
 | **Kustomize** | [`5.8.3`](https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize/v5.8.3) |
 | **Sofka** | [`v0.31.14`](https://github.com/nklmilojevic/sofka/releases/tag/v0.31.14) |
 | **SwarmCLI** | [`v2.2.0`](https://github.com/Eldara-Tech/swarmcli/releases/tag/v2.2.0) |
-| **Terraform** | [`1.17.0-rc2`](https://github.com/hashicorp/terraform/releases/tag/v1.17.0-rc2) |
+| **Terraform** | [`1.17.0`](https://github.com/hashicorp/terraform/releases/tag/v1.17.0) |
 | **Terragrunt** | [`v1.2.0`](https://github.com/gruntwork-io/terragrunt/releases/tag/v1.2.0) |
 | **OpenTofu** | [`1.13.2`](https://github.com/opentofu/opentofu/releases/tag/v1.13.2) |
 | **Vultr CLI** | [`v3.11.0`](https://github.com/vultr/vultr-cli/releases/tag/v3.11.0) |
 
-> 🔄 Last updated: 2026-10-21T16:30:49+02:00 · [Build #167](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/39634429443)
+> 🔄 Last updated: 2026-10-21T18:27:05+02:00 · [Build #168](https://github.com/stefanbosak/vultr-cloud-tools/actions/runs/39652924633)
 <!-- VERSION_INFO_END -->
 
 ---
